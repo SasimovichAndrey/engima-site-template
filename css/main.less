@@ -1,0 +1,325 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body{
+    background-image:url('../img/stonehaven.png');
+    //background-color: dodgerblue;
+    font-size: 16px;
+}
+
+#site-container{
+}
+
+// #logo-box{
+//     line-height: 100px;
+// }
+
+// #logo-box span, img{
+//     display: inline-block;
+// }
+
+// #company-name{
+//     line-height: 15px;
+// }
+
+#top-navigation{
+    background-color: #b3d4fc;
+    text-align: center;
+    margin-left:-15px;
+    margin-right:-15px;
+    border-radius: 10px 10px 0 0;
+}
+
+#top-navigation ul{
+    padding: 0px;
+    margin-bottom:0px;
+}
+
+#top-navigation ul li{
+    margin: 0;
+    display: inline-block;
+    height:70px;
+    width:150px;
+    border-left:1px solid white;
+    border-right:1px solid white;
+}
+
+.content-row{
+    background-color: white;
+}
+
+#top-navigation ul li a{
+    color: black;
+    display: block;
+    height: 100%;
+    width:100%;
+    padding: 5px;
+    padding-top:25px;
+}
+
+.bottom-separator{
+    background-color: green;
+    width:100%;
+    height:10px;
+}
+
+.section .section-header-inner{
+    font-size: 1.3em;
+    font-weight: bold;
+    display: block;
+    margin-bottom:10px;
+}
+
+.section{
+    padding:30px;
+}
+
+.section-header-outer{
+    background-color: #b3d4fc;
+    margin-left:-15px;
+    margin-right:-15px;
+}
+
+.section-header-outer .header-title{
+    padding:30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#contact-row{
+    background-color:#b3d4fc;
+    border-radius: 0 0 10px 10px;
+    color:white;
+}
+
+.contact-section-col-header{
+    font-weight: bold;
+    display: block;
+    margin-bottom:10px;
+}
+
+#email-form input, textarea{
+    border-radius: 5px;
+    color:black;
+}
+
+#email-form input[type=submit]{
+    margin-top:5px;
+}
+
+.form-input-label{
+    color:cornsilk;
+    display: block;
+}
+
+#footer{
+    height: 100px;
+    background: transparent;
+}
+
+@media (max-width:767px){
+    #top-navigation ul li{
+        display: block;
+        width:100%;
+        border-bottom:1px solid white;
+    }    
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
